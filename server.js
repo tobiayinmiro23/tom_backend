@@ -4,7 +4,8 @@ const router = require('./routes/index')
 
 const app = express()
 
-app.use(cors())
+// app.use(cors())
+app.use(cors({origin:"https://theopenmarket.netlify.app"}))
 app.use(express.json())
 app.use(router)
 
