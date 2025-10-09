@@ -41,9 +41,11 @@ class UserService {
                 }
             }
         } catch (error) {
+            console.log(error)
             return Response.Error(res, error?.message || 'unable to login, an error occured please try again later')
         }
     }
 
 }
 module.exports = new UserService()
+
