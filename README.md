@@ -1,8 +1,4 @@
 
-this project was built with postgres, nanoid, bcryptjs and cors, postgres for database, nanoid for generating unique ids, 
-bcryptjs for generating hash for password and 
-cors for resource sharing, 
-it is hosted on render with the free platform which makes the server sleep if there's inactivity, as such the speed can be a bit slow
 # tom_backend
 
 THe back end for tom (an image gallery website) built with express, supabase and PostgreSQL.
@@ -30,7 +26,6 @@ THe back end for tom (an image gallery website) built with express, supabase and
 1. **Clone the repository**
    ```bash
    git clone https://github.com/tom_backend.git
-   cd tom_backend
    ```
 2. **Enter directory**
    ```bash
@@ -42,7 +37,6 @@ THe back end for tom (an image gallery website) built with express, supabase and
    ```
 
 4. **Environment Setup**
-   
    Create a `.env` file in the root directory:
    ```env
    DATABASE_URL="postgresql://username:password@localhost:5432/databasename"
@@ -50,7 +44,7 @@ THe back end for tom (an image gallery website) built with express, supabase and
 
 5. **Start the development server**
    ```bash
-   npm ru
+   npm start 
    ```
 
 ## 🏗️ Project Structure
@@ -61,53 +55,30 @@ THe back end for tom (an image gallery website) built with express, supabase and
 ├── route/            # For handling routing
 ├── service/         # Contains business business logic and database queries
 ├── utils/         # Contains utility/helper functions
-
+├── server.js         # Backend entry point
 ```
 
 ## 📚 API Documentation
 
-### Project Onboarding
-- `GET /api/project-onboarding` - List all projects
-- `POST /api/project-onboarding` - Create new project
-- `GET /api/project-onboarding/[id]` - Get project details
-- `PUT /api/project-onboarding/[id]` - Update project
-- `DELETE /api/project-onboarding/[id]` - Delete project
-
-### Blog Posts
-- `GET /api/posts` - List all posts
-- `POST /api/posts` - Create new post
-- `GET /api/posts/[id]` - Get post details
-- `PUT /api/posts/[id]` - Update post
-- `DELETE /api/posts/[id]` - Delete post
-
-### Services
-- `GET /api/services` - List all services
-- `POST /api/services` - Create new service
-- `GET /api/services/[id]` - Get service details
-- `PUT /api/services/[id]` - Update service
-- `DELETE /api/services/[id]` - Delete service
-
-## 🔒 Authentication
-
-All API routes are protected by JWT authentication. Include the JWT token in the Authorization header:
-
-```
-Authorization: Bearer <your-token>
-```
-
-## 🧪 Data Validation
-
-Request data is validated using Zod schemas. Each model has its own validation schema in `src/lib/utils/validation.ts`.
+### Users
+- `POST /user/login` - for user login 
+- `POST /user/signin` - for user signin 
+- 
+### Comment
+- `GET /comments/:id` - Get a particular comments
+- `POST /comments/` - Create a new comment
+- `PUT /comments/` - Update a comment
+- `DELETE /comments/` - Delete a comment
 
 ## 📝 Environment Variables
 
 - `DATABASE_URL`: PostgreSQL database connection string
-- `JWT_SECRET`: Secret key for JWT token generation
-- `NODE_ENV`: Environment mode ('development' or 'production')
 
 ## 📦 Dependencies
 
-- **tailwind css**:  *for styling html elements*  
-- **react-router-dom**:  *for navigating*  
-- **react-spinners**:  *for loading animation*
+- **bcryptjs**:  *for hashing passwords and sensitive information*  
+- **cors**:  *for cross origin resource sharing*  
+- **nanoid**:  *for generating unique id*
+- **pg**:  *for connecting to postgres database and writing sql queries*
+- **nodemon**:  *for server development process*
 
