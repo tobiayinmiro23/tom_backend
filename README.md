@@ -3,9 +3,9 @@ this project was built with postgres, nanoid, bcryptjs and cors, postgres for da
 bcryptjs for generating hash for password and 
 cors for resource sharing, 
 it is hosted on render with the free platform which makes the server sleep if there's inactivity, as such the speed can be a bit slow
-# GsTechHub Website 2.0
+# tom_backend
 
-A modern, full-stack website for GsTechHub built with Next.js, Prisma, and PostgreSQL.
+THe back end for tom (an image gallery website) built with express, supabase and PostgreSQL.
 
 ## 🚀 Features
 
@@ -29,32 +29,28 @@ A modern, full-stack website for GsTechHub built with Next.js, Prisma, and Postg
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Gs-Tech-Hub/tom_backend.git
+   git clone https://github.com/tom_backend.git
    cd tom_backend
    ```
-
-2. **Install dependencies**
+2. **Enter directory**
+   ```bash
+   cd tom_backend
+   ``` 
+3. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. **Environment Setup**
+4. **Environment Setup**
    
    Create a `.env` file in the root directory:
    ```env
-   DATABASE_URL="postgresql://username:password@localhost:5432/gstechweb"
-   JWT_SECRET="your-secret-key"
-   ```
-
-4. **Database Setup**
-   ```bash
-   npx prisma generate
-   npx prisma db push
+   DATABASE_URL="postgresql://username:password@localhost:5432/databasename"
    ```
 
 5. **Start the development server**
    ```bash
-   npm run dev
+   npm ru
    ```
 
 ## 🏗️ Project Structure
@@ -110,4 +106,8 @@ Request data is validated using Zod schemas. Each model has its own validation s
 - `NODE_ENV`: Environment mode ('development' or 'production')
 
 ## 📦 Dependencies
+
+- **tailwind css**:  *for styling html elements*  
+- **react-router-dom**:  *for navigating*  
+- **react-spinners**:  *for loading animation*
 
