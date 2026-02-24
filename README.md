@@ -1,7 +1,7 @@
 
 # tom_backend
 
-THe back end for tom (an image gallery website) built with express, supabase and PostgreSQL.
+The back end for tom (an image gallery website) built with express, supabase and PostgreSQL.
 
 ## 🚀 Features
 
@@ -12,6 +12,7 @@ THe back end for tom (an image gallery website) built with express, supabase and
 - edit comments functionality 
 - delete comments functionality
 - integration with supabase
+- hashing of sensitive information
 - Secure info storage in a postgres database
 
 
@@ -63,7 +64,7 @@ THe back end for tom (an image gallery website) built with express, supabase and
 ### Users
 - `POST /user/login` - for user login 
 - `POST /user/signin` - for user signin 
-- 
+  
 ### Comment
 - `GET /comments/:id` - Get a particular comments
 - `POST /comments/` - Create a new comment
