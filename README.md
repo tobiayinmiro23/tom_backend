@@ -9,20 +9,19 @@ A modern, full-stack website for GsTechHub built with Next.js, Prisma, and Postg
 
 ## 🚀 Features
 
-- Next.js 13+ with App Router
-- Prisma ORM with PostgreSQL
-- RESTful API endpoints
-- Authentication and Authorization
-- Project Onboarding System
-- Blog Management
-- Portfolio Showcase
-- Service and Pricing Management
-- Contact Form System
-- Fun Facts Display
+- sign up
+- login in
+- add comments functionality
+- view comments functionality 
+- edit comments functionality 
+- delete comments functionality
+- integration with supabase
+- Secure info storage in a postgres database
+
 
 ## 📋 Prerequisites
 
-- Node.js 18+ 
+- Node.js >= 18 
 - PostgreSQL database
 - npm or yarn
 
@@ -30,8 +29,8 @@ A modern, full-stack website for GsTechHub built with Next.js, Prisma, and Postg
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Gs-Tech-Hub/gstechweb2.0.git
-   cd gstechweb2.0
+   git clone https://github.com/Gs-Tech-Hub/tom_backend.git
+   cd tom_backend
    ```
 
 2. **Install dependencies**
@@ -61,18 +60,12 @@ A modern, full-stack website for GsTechHub built with Next.js, Prisma, and Postg
 ## 🏗️ Project Structure
 
 ```
-├── prisma/
-│   └── schema.prisma       # Database schema
-├── src/
-│   ├── app/               # Next.js 13+ App Router
-│   │   ├── api/          # API routes
-│   │   └── ...           # Page routes
-│   ├── components/        # React components
-│   ├── lib/              # Utility functions
-│   │   ├── prisma.ts     # Prisma client
-│   │   └── utils/        # Helper functions
-│   └── middleware/        # Authentication middleware
-└── public/               # Static files
+├── controller/      # For recieving requests and providing responses
+├── model/            # Contains database schema 
+├── route/            # For handling routing
+├── service/         # Contains business business logic and database queries
+├── utils/         # Contains utility/helper functions
+
 ```
 
 ## 📚 API Documentation
