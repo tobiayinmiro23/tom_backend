@@ -40,7 +40,7 @@ The back end for tom (an image gallery website) built with express, supabase and
 4. **Environment Setup**
    Create a `.env` file in the root directory:
    ```env
-   DATABASE_URL="postgresql://username:password@localhost:5432/databasename"
+   DATABASE_URL="postgresql://<username>:<password>@localhost:<port>/<databasename>"
    ```
 
 5. **Start the development server**
