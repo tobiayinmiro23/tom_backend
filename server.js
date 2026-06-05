@@ -4,8 +4,25 @@ const router = require('./routes/index')
 const db = require('./utils/db.js')
 const app = express()
 
-app.use(cors())
-// app.use(cors({origin:""}))
+const allowedOrigins = [
+  "https://theopenmarket.netlify.app",
+  "https://dev-tobi.netlify.app",
+];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 app.use(express.json())
 app.use(router)
 
